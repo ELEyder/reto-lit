@@ -1,6 +1,4 @@
 import { css, html, LitElement } from "lit";
-import { Star } from "lucide-static";
-import { Home } from "lucide-static";
 
 export class MyBottom extends LitElement {
   static get properties() {
@@ -44,10 +42,7 @@ export class MyBottom extends LitElement {
       color: white;
       text-decoration: none;
     }
-    
-    a:hover {
-      text-decoration: none;
-    }
+
     `;
   }
 }
