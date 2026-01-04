@@ -95,6 +95,7 @@ export class MyHeader extends LitElement {
         max-width: 1200px;
         height: 121px;
         margin: auto;
+        justify-content: space-between;
       }
     `;
   }
