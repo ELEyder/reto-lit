@@ -24,12 +24,12 @@ export class MyHeader extends LitElement {
     return html`
       <header>
         <div class="container-header">
-          <a href="/">
+          <a href="#">
             <img class="logo" src="./logo.svg" alt="Vite logo" />
           </a>
           <ul>
             <li>
-              <a href="/">
+              <a href="#">
                 <span class="icon" .innerHTML=${Home}></span>Inicio</a
               >
             </li>
