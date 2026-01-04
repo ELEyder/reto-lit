@@ -24,25 +24,33 @@ export class MyBottom extends LitElement {
 
   static get styles() {
     return css`
-    .bottom {
-      background-color: #2b2b2b;
-      padding: 1rem;
-    }
+      .bottom {
+        background-color: #2b2b2b;
+        padding: 1rem;
+      }
 
-    .links {
-      max-width: 1200px;
-      width: 100%;
-      display: flex;
-      justify-content: end;
-      gap: 2rem;
-      margin: 0 auto;
-    }
+      .links {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+        margin: 0 auto;
+      }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
+      @media (max-width: 777px) {
+        img {
+          height: 30px;
+        }
+        .links {
+          flex-direction: column;
+        }
+      }
     `;
   }
 }

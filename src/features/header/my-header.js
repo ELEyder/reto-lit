@@ -46,17 +46,22 @@ export class MyHeader extends LitElement {
 
   static get styles() {
     return css`
+      img {
+        height: 40px;
+      }
       header {
         display: flex;
         align-items: center;
         gap: 1rem;
         background-color: #f0f0f0;
+        padding: 1rem;
       }
 
       ul {
         display: flex;
         align-items: center;
         gap: 1rem;
+        padding: 0;
       }
 
       li {
@@ -91,11 +96,15 @@ export class MyHeader extends LitElement {
         display: flex;
         width: 100%;
         align-items: center;
-        gap: 2rem;
         max-width: 1200px;
-        height: 121px;
         margin: auto;
         justify-content: space-between;
+      }
+
+      @media (max-width: 777px) {
+        img {
+          height: 20px;
+        }
       }
     `;
   }

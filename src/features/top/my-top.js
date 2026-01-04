@@ -33,7 +33,7 @@ export class MyTop extends LitElement {
     return css`
       .top {
         background-color: blueviolet;
-        padding: 0.5rem 0;
+        padding: 0.5rem 1rem;
       }
 
       p {

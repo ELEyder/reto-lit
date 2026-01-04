@@ -54,7 +54,7 @@ export class MyContent extends LitElement {
       }
 
       .container {
-        width: 1200px;
+        max-width: 1200px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -66,6 +66,20 @@ export class MyContent extends LitElement {
         grid-template-rows: repeat(4, auto);
         gap: 16px;
         padding: 16px;
+      }
+
+      @media (max-width: 1024px) {
+        .container {
+          padding: 1rem;
+        }
+        .list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 777px) {
+        .list {
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
     `;
   }

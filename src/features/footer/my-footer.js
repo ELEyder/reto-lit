@@ -135,6 +135,20 @@ export class MyFooter extends LitElement {
         gap: 0.5rem;
         justify-content: space-evenly;
       }
+
+      @media (max-width: 777px) {
+        img {
+          height: 30px;
+        }
+        .container {
+          flex-direction: column;
+        }
+        .row-icons, .row {
+          flex-direction: column;
+          padding: 1rem;
+        }
+       
+      }
     `;
   }
 }
