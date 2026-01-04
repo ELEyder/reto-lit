@@ -94,6 +94,7 @@ export class CountryModal extends LitElement {
       .modal img {
         width: 100%;
         border-radius: 8px;
+        aspect-ratio: 16/9;
       }
 
       .close {
