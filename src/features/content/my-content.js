@@ -50,6 +50,7 @@ export class MyContent extends LitElement {
     return css`
       .content {
         background-color: white;
+        margin-bottom: 20px;
       }
 
       .container {
