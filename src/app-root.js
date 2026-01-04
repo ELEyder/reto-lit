@@ -1,5 +1,7 @@
 import { LitElement, html } from "lit";
+import "./features/top/my-top";
 import "./features/header/my-header";
+import "./features/footer/my-footer";
 
 export class AppRoot extends LitElement {
 
