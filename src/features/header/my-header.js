@@ -11,6 +11,15 @@ export class MyHeader extends LitElement {
     super();
   }
 
+  toggleFavorites() {
+    this.dispatchEvent(
+      new CustomEvent("toggle-favorites", {
+        bubbles: true,
+        composed: true,
+      })
+    );
+  }
+
   render() {
     return html`
       <header>
@@ -25,7 +34,7 @@ export class MyHeader extends LitElement {
               >
             </li>
             <li>
-              <a href="/favorites">
+              <a @click=${this.toggleFavorites}>
                 <span class="icon" .innerHTML=${Star}></span>Favoritos</a
               >
             </li>
@@ -66,6 +75,7 @@ export class MyHeader extends LitElement {
         padding: 0.5rem 1rem;
         gap: 0.5rem;
         color: #333;
+        cursor: pointer;
       }
 
       a:hover {

@@ -45,6 +45,8 @@ export class CountryCard extends LitElement {
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    window.dispatchEvent(new CustomEvent("favorites-changed"));
   }
 
   render() {
