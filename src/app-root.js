@@ -11,6 +11,8 @@ export class AppRoot extends LitElement {
       <main>
         <my-top></my-top>
         <my-header></my-header>
+        <my-footer></my-footer>
+        <my-bottom></my-bottom>
       </main>
     `;
   }
