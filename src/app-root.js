@@ -1,5 +1,6 @@
 import { LitElement, html } from "lit";
 import "./features/header/my-header";
+import "./features/footer/my-footer";
 
 export class AppRoot extends LitElement {
 
@@ -7,6 +8,7 @@ export class AppRoot extends LitElement {
     return html`
       <main>
         <my-header></my-header>
+        <my-footer></my-footer>
       </main>
     `;
   }
