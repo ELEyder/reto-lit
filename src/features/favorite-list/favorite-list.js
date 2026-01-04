@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { getCountries } from "../content/api/countries.api";
+import { Star } from "lucide-static";
 
 export class FavoriteList extends LitElement {
   static properties = {
@@ -64,7 +65,12 @@ export class FavoriteList extends LitElement {
         <div class="content">
           ${favoriteCountries?.length
             ? favoriteCountries.map(
-                (country) => html` <p>${country.title}</p> `
+                (country) =>
+                  html`
+                    <p class="row">
+                      <span .innerHTML=${Star}></span> ${country.title}
+                    </p>
+                  `
               )
             : html`<p>No hay favoritos</p>`}
         </div>
@@ -117,7 +123,7 @@ export class FavoriteList extends LitElement {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding: 1rem 2rem;
       border-bottom: 1px solid #ddd;
     }
 
@@ -129,9 +135,15 @@ export class FavoriteList extends LitElement {
     }
 
     .content {
-      padding: 1rem;
+      padding: 1rem 2rem;
       overflow-y: auto;
       flex: 1;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
   `;
 }
